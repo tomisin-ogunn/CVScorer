@@ -1,130 +1,146 @@
-Product Requirement Document (PRD)
+Product Requirements Document (PRD)
 
-Project: CV & Job Description Similarity Checker
-Prepared For: Claude AI / Development Team
+Project: CV Matcher Front-End
 Prepared By: Ahmed Bilal
 Date: 6 Feb 2026
 
 1. Objective
 
-Create a single-page web application that allows users to input a CV and a Job Description, either by typing or uploading PDFs, and calculate a similarity score between them. The UI should be clean, simple, and intuitive, using React.js and TailwindCSS.
+Create a single-page front-end application that allows users to input CVs and Job Descriptions, compare them, and display a similarity score. This stage focuses on layout, styling, and user interactions only. No backend or AI logic is required.
 
 2. Target Users
 
-Job seekers who want to tailor their CVs to specific job descriptions.
+HR professionals evaluating candidates.
 
-Recruiters who want a quick comparison of CVs against job descriptions.
+Recruiters comparing CVs to job descriptions.
 
-3. Functional Requirements
-3.1 Layout & UI
+Developers and testers for the initial front-end prototype.
 
-Navbar at the top with project title (e.g., "CV Matcher").
+3. Scope
 
-Main Page: Split into two primary columns:
+Implemented in React.js with TypeScript.
 
-Left Column:
+Styling with TailwindCSS.
 
-CV Input Box (large, multiline text area)
+Front-end only; placeholder interactions.
 
-Placeholder text: Input CV Data
+Includes linting configuration for code quality.
 
-Clear Button to empty the text box.
+Excluded:
 
-Upload PDF Button to populate the box with PDF content.
+Actual AI or backend similarity computation.
 
-Middle Column:
+PDF parsing beyond displaying file names.
 
-Job Description Input Box (large, multiline text area)
+4. Functional Requirements
+4.1 Navbar
 
-Placeholder text: Input Job Description
+Fixed at the top of the page.
 
-Clear Button to empty the text box.
+Displays project title: “CV Matcher”.
 
-Upload PDF Button to populate the box with PDF content.
+4.2 Main Section
+4.2.1 CV Input Box (Left)
 
-Right Column:
+Large multiline text area.
 
-Similarity Score Box (read-only) to display the calculated similarity.
+Placeholder: "Input CV Data".
 
-Bottom Section:
+Scrollable if content overflows.
 
-Check Button: When clicked, computes similarity between the CV and job description.
+Buttons below:
 
-3.2 Functionality
+Clear → resets text area to empty.
 
-Clear Button: Resets the corresponding input box.
+Upload PDF → opens file selection; displays selected file name in the text area.
 
-Upload PDF:
+4.2.2 Job Description Input Box (Right)
 
-Allows user to upload a PDF file.
+Large multiline text area.
 
-Extracts text and populates the corresponding input box.
+Placeholder: "Input Job Description".
 
-Acceptable file format: .pdf.
+Scrollable if content overflows.
 
-Check Button:
+Buttons below:
 
-Sends the CV and Job Description text to backend (or local function for MVP).
+Clear → resets text area to empty.
 
-Returns a similarity score (e.g., 0–100%).
+Upload PDF → opens file selection; displays selected file name in the text area.
 
-Displays score in the Similarity Score Box.
+4.2.3 Similarity Score Box
 
-4. Non-Functional Requirements
+Positioned on the right side of the page (desktop view).
 
-Frameworks & Tools:
+Read-only display.
 
-React.js for front-end.
+Initially empty.
 
-TailwindCSS for styling.
+Populated with a static placeholder number (e.g., 85%) when Check button is clicked.
 
-Responsiveness: Layout should adapt to different screen sizes.
+4.3 Bottom Section
 
-Accessibility: Buttons and inputs should be keyboard-accessible.
+Check Button centered below input boxes.
 
-Performance: Page should load quickly and handle moderately large text inputs.
+Triggers a placeholder function: updates similarity score box with static value.
 
-5. Phase 1 – MVP Scope
+5. Non-Functional Requirements
 
-Single-page layout with side-by-side input boxes.
+Responsive design using TailwindCSS.
 
-Clear buttons for each input box.
+Consistent and visually distinct buttons (Clear, Upload PDF, Check).
 
-Upload PDF functionality (text extraction only).
+Large input boxes visually suggest capacity for long text.
 
-Similarity Score box (placeholder for backend integration).
+Smooth user experience with no page reloads.
 
-Check button triggers placeholder function that can later be connected to AI similarity engine.
+Linted TypeScript codebase following best practices.
 
-6. Phase 2 – Enhancements
+6. Layout and UX Requirements
 
-Real-time similarity calculation as user types.
+Desktop Layout:
 
-Highlighting matched keywords between CV and job description.
+------------------------------------------------------
+| Navbar: CV Matcher                               |
+------------------------------------------------------
+| CV Input          | Job Description Input        | Similarity Score
+| [Text Area]       | [Text Area]                  | [Read-only Box]
+| [Clear][Upload]   | [Clear][Upload]             |
+------------------------------------------------------
+|                  [Check Button Centered]        |
+------------------------------------------------------
 
-Historical comparisons and score tracking.
 
-User authentication and account management.
+Mobile Layout:
 
-Downloadable similarity report as PDF.
+Stack CV input, Job Description input, and Similarity Score vertically.
 
-7. UI Mockup (Textual)
----------------------------------------------
-| Navbar: CV Matcher                        |
----------------------------------------------
-| CV Input Box           | Job Description Box  | Similarity Score |
-| [Text Area]            | [Text Area]         | [Score: 85%]    |
-| [Clear] [Upload PDF]   | [Clear] [Upload PDF]|                 |
----------------------------------------------
-|                             [Check] Button |
----------------------------------------------
+Buttons remain directly below their corresponding inputs.
 
-8. Deliverables
+7. Interactions
 
-React.js frontend code for single-page application.
+Clear Buttons: empties the respective text area.
 
-TailwindCSS styling matching layout and design requirements.
+Upload PDF Buttons: opens file selector; displays file name in the respective input area (no parsing yet).
 
-Functional buttons (Clear, Upload PDF, Check).
+Check Button: triggers placeholder function; updates similarity score box with a static value.
 
-Placeholder Similarity Score logic.
+8. Acceptance Criteria
+
+All UI elements render correctly on desktop and mobile.
+
+Buttons respond as expected (Clear, Upload PDF, Check).
+
+Text areas are scrollable when content overflows.
+
+Similarity score box updates on Check button click with placeholder value.
+
+Code follows TypeScript with linting enabled.
+
+9. Future Considerations (Out of Scope)
+
+Integrating AI/ML-based similarity analysis.
+
+Parsing PDF content into text areas.
+
+Saving or exporting results.

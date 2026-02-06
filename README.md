@@ -1,107 +1,179 @@
-# CV Matcher
+# CVChecker Front-End
 
-A React-based front-end application for checking similarity between CVs and Job Descriptions.
+A modern, responsive single-page application for comparing CVs with Job Descriptions and displaying similarity scores.
 
-## Features
+## 📋 Overview
 
-- **Dual Input Interface**: Side-by-side text areas for CV and Job Description input
-- **PDF Upload Support**: Upload PDF files for both CV and Job Description (displays file name)
-- **Clear Functionality**: Reset individual text areas with dedicated clear buttons
-- **Similarity Score Display**: View matching score in a dedicated panel
-- **Responsive Design**: Built with TailwindCSS for a modern, responsive layout
-- **Clean UI**: Fixed navbar, well-organized layout with proper spacing
+CVChecker is a front-end prototype built with React, TypeScript, and TailwindCSS. It provides an intuitive interface for HR professionals and recruiters to evaluate candidate CVs against job requirements.
 
-## Tech Stack
+**Note:** This is a front-end only prototype. The similarity score is currently a placeholder value. Backend integration and AI-powered analysis will be implemented in future phases.
 
-- **React.js** (v18.2.0)
-- **TailwindCSS** (v3.4.0)
-- **React Scripts** (v5.0.1)
+## 🚀 Features
 
-## Getting Started
+- **Dual Input System**: Separate text areas for CV and Job Description input
+- **PDF Upload Support**: UI for PDF file selection (parsing to be implemented)
+- **Similarity Scoring**: Visual display of match percentage with color-coded feedback
+- **Responsive Design**: Optimized layouts for both desktop and mobile devices
+- **Modern UI**: Clean, professional interface built with TailwindCSS
+- **Type-Safe**: Written in TypeScript with strict type checking
+- **Code Quality**: ESLint configuration for maintaining code standards
 
-### Prerequisites
+## 🛠️ Tech Stack
 
-- Node.js (v14 or higher)
-- npm or yarn
+- **React 18** - UI library
+- **TypeScript** - Type-safe JavaScript
+- **TailwindCSS** - Utility-first CSS framework
+- **Webpack 5** - Module bundler
+- **ESLint** - Code linting and quality
 
-### Installation
+## 📦 Installation
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd CVScorer
-```
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd CVScorer
+   ```
 
-2. Install dependencies:
-```bash
-npm install
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-3. Start the development server:
+## 🏃 Running the Application
+
+### Development Mode
+Start the development server with hot reload:
 ```bash
 npm start
 ```
+The application will open automatically at `http://localhost:3000`
 
-4. Open your browser and navigate to:
+### Production Build
+Create an optimized production build:
+```bash
+npm run build
 ```
-http://localhost:3000
+The build output will be in the `dist/` directory.
+
+### Code Linting
+Run ESLint to check code quality:
+```bash
+npm run lint
 ```
 
-## Project Structure
+Fix linting issues automatically:
+```bash
+npm run lint:fix
+```
+
+## 📱 Usage
+
+1. **Enter CV Data**: Type or paste CV content into the left text area
+2. **Enter Job Description**: Type or paste job description into the middle text area
+3. **Upload PDFs (Optional)**: Click "Upload PDF" buttons to select PDF files (displays filename only)
+4. **Check Similarity**: Click the "Check Similarity" button to calculate the match score
+5. **View Results**: The similarity score appears on the right with color-coded feedback:
+   - 🟢 Green (80-100%): Excellent Match
+   - 🟡 Yellow (60-79%): Good Match
+   - 🟠 Orange (40-59%): Fair Match
+   - 🔴 Red (0-39%): Poor Match
+
+## 📐 Project Structure
 
 ```
 CVScorer/
 ├── public/
-│   └── index.html
+│   └── index.html          # HTML template
 ├── src/
 │   ├── components/
-│   │   └── CVMatcher.js
-│   ├── App.js
-│   ├── index.js
-│   └── index.css
-├── package.json
-├── tailwind.config.js
-└── postcss.config.js
+│   │   ├── Navbar.tsx      # Top navigation bar
+│   │   ├── InputBox.tsx    # Reusable input component
+│   │   └── SimilarityScore.tsx  # Score display component
+│   ├── App.tsx             # Main application component
+│   ├── index.tsx           # Application entry point
+│   └── index.css           # Global styles and Tailwind imports
+├── .eslintrc.js            # ESLint configuration
+├── tsconfig.json           # TypeScript configuration
+├── tailwind.config.js      # TailwindCSS configuration
+├── postcss.config.js       # PostCSS configuration
+├── webpack.config.js       # Webpack configuration
+├── package.json            # Dependencies and scripts
+└── README.md               # This file
 ```
 
-## Available Scripts
+## 🎨 Design Features
 
-### `npm start`
-Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Fixed Navigation**: Navbar stays at the top while scrolling
+- **Gradient Backgrounds**: Modern gradient color schemes
+- **Hover Effects**: Interactive button and card animations
+- **Focus States**: Accessibility-friendly focus indicators
+- **Responsive Grid**: 3-column desktop layout that stacks on mobile
+- **Shadow Effects**: Depth and hierarchy through subtle shadows
 
-### `npm run build`
-Builds the app for production to the `build` folder.
+## 🔧 Configuration
 
-### `npm test`
-Launches the test runner in interactive watch mode.
+### TypeScript
+The project uses strict TypeScript settings with:
+- Strict mode enabled
+- No unused locals/parameters warnings
+- Path aliases configured (`@/` → `src/`)
 
-## Usage
+### Linting
+ESLint is configured with:
+- React and React Hooks rules
+- TypeScript-specific rules
+- Automatic React version detection
 
-1. **Input CV Data**: Type or paste CV content in the left text area, or upload a PDF file
-2. **Input Job Description**: Type or paste job description in the right text area, or upload a PDF file
-3. **Click Check**: Press the "Check Similarity" button at the bottom
-4. **View Results**: The similarity score will appear in the right panel (currently shows a placeholder 85%)
+### TailwindCSS
+Custom theme extends include:
+- Primary color palette (blue shades)
+- Inter font family
 
-## Current Implementation
+## 🧪 Testing Requirements (To Be Implemented)
 
-This is a **front-end only** implementation with the following placeholder functionality:
+Future testing should verify:
+- ✅ All UI elements render correctly on desktop and mobile
+- ✅ Clear buttons empty their respective text areas
+- ✅ Upload PDF buttons open file selector and display filename
+- ✅ Check button is disabled when inputs are empty
+- ✅ Similarity score updates when Check button is clicked
+- ✅ Text areas are scrollable with overflow content
 
-- PDF upload displays the file name but doesn't parse content
-- Check button returns a static similarity score (85%)
-- No backend integration or AI processing
+## 🚧 Future Enhancements
 
-## Future Enhancements
+- **Backend Integration**: Connect to AI/ML similarity analysis service
+- **PDF Parsing**: Extract text content from uploaded PDF files
+- **Results Export**: Save or export comparison results
+- **History**: Track and display previous comparisons
+- **Advanced Matching**: Keyword highlighting and match details
+- **User Accounts**: Save preferences and comparison history
 
-- Backend integration for actual similarity calculation
-- PDF parsing and text extraction
-- AI-powered matching algorithm
-- Detailed match breakdown
-- Export results functionality
+## 👨‍💻 Development
 
-## Author
+### Prerequisites
+- Node.js 16+ and npm
+- Modern web browser with ES2020 support
 
-Ahmed Bilal
+### Code Style
+- Use functional components with hooks
+- Follow TypeScript strict mode
+- Use TailwindCSS utility classes
+- Keep components small and focused
+- Write descriptive prop types
 
-## Date
+## 📄 License
 
-6 Feb 2026
+MIT License - see LICENSE file for details
+
+## 👤 Author
+
+**Ahmed Bilal**  
+Date: February 6, 2026
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+---
+
+**Note**: This is a front-end prototype. The similarity calculation is currently a placeholder that generates random scores. Real AI-powered matching will be implemented in future iterations.
