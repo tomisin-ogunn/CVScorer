@@ -139,15 +139,6 @@ Future testing should verify:
 - ✅ Similarity score updates when Check button is clicked
 - ✅ Text areas are scrollable with overflow content
 
-## 🚧 Future Enhancements
-
-- **Backend Integration**: Connect to AI/ML similarity analysis service
-- **PDF Parsing**: Extract text content from uploaded PDF files
-- **Results Export**: Save or export comparison results
-- **History**: Track and display previous comparisons
-- **Advanced Matching**: Keyword highlighting and match details
-- **User Accounts**: Save preferences and comparison history
-
 ## 👨‍💻 Development
 
 ### Prerequisites
@@ -161,18 +152,12 @@ Future testing should verify:
 - Keep components small and focused
 - Write descriptive prop types
 
-## 📄 License
-
-MIT License - see LICENSE file for details
-
 ## 👤 Author
 
-**Ahmed Bilal**  
+**Ahmed Bilal, Tomisin Ogunnusi**  
 Date: February 6, 2026
 
-## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
 
 ---
 
