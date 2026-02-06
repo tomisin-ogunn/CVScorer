@@ -1,5 +1,5 @@
 import React, { useRef, ChangeEvent } from 'react';
-
+import { Upload } from "react-bootstrap-icons";
 interface InputBoxProps {
   title: string;
   placeholder: string;
@@ -60,16 +60,16 @@ const InputBox: React.FC<InputBoxProps> = ({
           
           <button
             onClick={handleFileClick}
-            className="px-5 py-2.5 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+            className="flex gap-2 px-5 py-2.5 bg-cvblue hover:bg-primary-600 text-white font-medium rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
             aria-label={`Upload PDF for ${title}`}
           >
-            Upload PDF
+            <Upload className="text-cvgreen mt-1"/> <span>Upload Doc (PDF/DOCX)</span>
           </button>
           
           <input
             ref={fileInputRef}
             type="file"
-            accept=".pdf"
+            accept=".pdf, .docx, .txt"
             onChange={handleFileChange}
             className="hidden"
             aria-hidden="true"

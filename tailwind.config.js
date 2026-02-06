@@ -7,6 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        cvblue: "#003366",
+        cvgreen: "#adff5c",
         primary: {
           50: '#f0f9ff',
           100: '#e0f2fe',
@@ -19,6 +21,7 @@ module.exports = {
           800: '#075985',
           900: '#0c4a6e',
         },
+  
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

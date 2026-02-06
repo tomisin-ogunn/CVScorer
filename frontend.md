@@ -1,7 +1,7 @@
 Product Requirements Document (PRD)
 
 Project: CV Matcher Front-End
-Prepared By: Ahmed Bilal
+Prepared By: Ahmed Bilal, Tomisin Ogunnusi
 Date: 6 Feb 2026
 
 1. Objective
