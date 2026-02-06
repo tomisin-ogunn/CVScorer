@@ -160,5 +160,3 @@ Date: February 6, 2026
 
 
 ---
-
-**Note**: This is a front-end prototype. The similarity calculation is currently a placeholder that generates random scores. Real AI-powered matching will be implemented in future iterations.
