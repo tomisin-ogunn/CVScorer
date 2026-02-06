@@ -1,10 +1,10 @@
-# CVChecker Front-End
+# CVScorer Front-End
 
 A modern, responsive single-page application for comparing CVs with Job Descriptions and displaying similarity scores.
 
 ## 📋 Overview
 
-CVChecker is a front-end prototype built with React, TypeScript, and TailwindCSS. It provides an intuitive interface for HR professionals and recruiters to evaluate candidate CVs against job requirements.
+CVScorer is a front-end prototype built with React, TypeScript, and TailwindCSS. It provides an intuitive interface for HR professionals and recruiters to evaluate candidate CVs against job requirements.
 
 **Note:** This is a front-end only prototype. The similarity score is currently a placeholder value. Backend integration and AI-powered analysis will be implemented in future phases.
 
