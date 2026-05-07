@@ -1,4 +1,4 @@
-# CVScorer Front-End
+# CVScorer Application
 
 A modern, responsive single-page application for comparing CVs with Job Descriptions and displaying similarity scores.
 
@@ -8,7 +8,7 @@ CVScorer now consists of a **frontend** (React/TypeScript) and a **backend** (Fa
 
 **Note:** The similarity logic is still a placeholder. You can later replace the backend scoring implementation with real AI-powered analysis.
 
-## Roles:
+## 🧑‍💻 Roles:
 
 - **Ahmed Bilal** [https://github.com/AhmedBilal449] – Developed backend functionality using FastAPI, implementing deterministic scoring with Gemini embeddings and cosine similarity for efficient data processing and retrieval.
 - **Tomisin Ogunnusi** – Designed and developed an intuitive frontend interface using React.js, TypeScript, and Tailwind CSS improving usability and overall user experience.
@@ -36,7 +36,6 @@ CVScorer now consists of a **frontend** (React/TypeScript) and a **backend** (Fa
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd cv-scorer-project
    ```
 
 2. **Install frontend dependencies**
