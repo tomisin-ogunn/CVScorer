@@ -8,6 +8,11 @@ CVScorer now consists of a **frontend** (React/TypeScript) and a **backend** (Fa
 
 **Note:** The similarity logic is still a placeholder. You can later replace the backend scoring implementation with real AI-powered analysis.
 
+## Roles:
+
+- **Ahmed Bilal** [https://github.com/AhmedBilal449] – Developed backend functionality using FastAPI, implementing deterministic scoring with Gemini embeddings and cosine similarity for efficient data processing and retrieval.
+- **Tomisin Ogunnusi** – Designed and developed an intuitive frontend interface using React.js, TypeScript, and Tailwind CSS improving usability and overall user experience.
+
 ## 🚀 Features
 
 - **Dual Input System**: Separate text areas for CV and Job Description input
