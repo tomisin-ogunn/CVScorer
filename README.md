@@ -6,7 +6,6 @@ A modern, responsive single-page application for comparing CVs with Job Descript
 
 CVScorer now consists of a **frontend** (React/TypeScript) and a **backend** (FastAPI). The frontend provides an intuitive interface for HR professionals and recruiters to evaluate candidate CVs against job requirements, while the backend exposes an API that returns a (currently placeholder) similarity score.
 
-**Note:** The similarity logic is still a placeholder. You can later replace the backend scoring implementation with real AI-powered analysis.
 
 ## 🧑‍💻 Roles:
 
@@ -35,7 +34,7 @@ CVScorer now consists of a **frontend** (React/TypeScript) and a **backend** (Fa
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone <repository-url>s
    ```
 
 2. **Install frontend dependencies**
