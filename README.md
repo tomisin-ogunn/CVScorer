@@ -110,7 +110,7 @@ cv-scorer-project/
     └── frontend/                # React + TypeScript frontend
 ```
 
-Frontend structure (this folder):
+Frontend structure:
 
 ```
 frontend/
@@ -132,6 +132,28 @@ frontend/
 ├── webpack.config.js            # Webpack configuration
 ├── package.json                 # Dependencies and scripts
 └── README.md                    # This file
+```
+
+
+Backend structure:
+
+
+```
+backend/
+├── main.py                      # FastAPI app (endpoints: /health, /score, /stats, /cache/clear)
+├── deterministic_matcher.py     # Deterministic scoring (Gemini embeddings + cosine + keywords + sections + Phase 4 opts)
+├── ai_matcher.py                # Optional LLM-based scoring using Gemini (prompted semantic analysis)
+├── embedding_cache.py           # Phase 4: file-based embedding cache to reduce repeated API calls
+├── usage_tracker.py             # Phase 4: tracks request/token usage (free-tier/cost guardrails)
+├── text_optimizer.py            # Phase 4: truncation + chunking helpers to reduce token usage
+├── requirements.txt             # Backend Python dependencies
+├── README.md                    # Backend-specific setup/run notes
+├── KEYWORD_IMPROVEMENTS.md      # Notes on keyword extraction improvements
+├── test_api.py                  # Quick API smoke test script (calls /health and /score)
+├── test_comprehensive.py        # Comprehensive scoring test suite (multiple scenarios)
+├── test_integration.py          # End-to-end keyword extraction/matching integration test
+├── test_keyword_extraction.py   # Keyword extraction validation script (prints extracted skills/tech)
+└── test_phase4.py               # Phase 4 tests (caching, usage tracking, text optimization)
 ```
 
 ## 🎨 Design Features
