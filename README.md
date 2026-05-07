@@ -43,7 +43,7 @@ CVScorer now consists of a **frontend** (React/TypeScript) and a **backend** (Fa
    npm install
    ```
 
-3. **(Optional) Set up backend environment**
+3. **Set up backend environment**
    ```bash
    cd ../backend
    python -m venv .venv
