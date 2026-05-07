@@ -44,7 +44,7 @@ const InputBox: React.FC<InputBoxProps> = ({
             value={value}
             onChange={handleTextChange}
             placeholder={placeholder}
-            className="w-full h-full min-h-[300px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none transition-all duration-200 text-gray-700 placeholder-gray-400"
+            className="w-full h-full min-h-[300px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none transition-all duration-200 text-gray-700 placeholder-gray-400 placeholder:italic"
             aria-label={title}
           />
         </div>

@@ -34,3 +34,18 @@ coverage/
 # Misc
 .cache/
 *.tsbuildinfo
+
+# Python
+backend/.venv/
+backend/__pycache__/
+backend/*.pyc
+backend/cache/
+
+# Env vars
+.env
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
