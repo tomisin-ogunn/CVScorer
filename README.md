@@ -31,12 +31,12 @@ CVScorer now consists of a **frontend** (React/TypeScript) and a **backend** (Fa
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd CVScorerProject
+   cd cv-scorer-project
    ```
 
 2. **Install frontend dependencies**
    ```bash
-   cd cv-scorer/frontend
+   cd CVScorer/frontend
    npm install
    ```
 
@@ -53,7 +53,7 @@ CVScorer now consists of a **frontend** (React/TypeScript) and a **backend** (Fa
 ### Frontend (Development Mode)
 Start the frontend development server with hot reload:
 ```bash
-cd cv-scorer/frontend
+cd CVScorer/frontend
 npm start
 ```
 The application will open automatically at `http://localhost:3000`.
@@ -61,7 +61,7 @@ The application will open automatically at `http://localhost:3000`.
 ### Backend (FastAPI)
 In a separate terminal, from the backend folder:
 ```bash
-cd cv-scorer/backend
+cd CVScorer/backend
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 The API will be available at `http://localhost:8000`.
@@ -101,8 +101,8 @@ npm run lint:fix
 Top-level (simplified):
 
 ```
-CVScorerProject/
-└── cv-scorer/
+cv-scorer-project/
+└── CVScorer/
     ├── backend/                 # FastAPI backend
     └── frontend/                # React + TypeScript frontend
 ```
@@ -185,7 +185,7 @@ Future testing should verify:
 ## 👤 Author
 
 **Ahmed Bilal, Tomisin Ogunnusi**  
-Date: February 9, 2026
+Date: May 07, 2026
 
 
 
