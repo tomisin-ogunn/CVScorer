@@ -184,7 +184,7 @@ Custom theme extends include:
 - Primary color palette (blue shades)
 - Inter font family
 
-## 🧪 Testing Requirements (To Be Implemented)
+<!-- ## 🧪 Testing Requirements (To Be Implemented)
 
 Future testing should verify:
 - ✅ All UI elements render correctly on desktop and mobile
@@ -205,7 +205,7 @@ Future testing should verify:
 - Follow TypeScript strict mode
 - Use TailwindCSS utility classes
 - Keep components small and focused
-- Write descriptive prop types
+- Write descriptive prop types -->
 
 ## 👤 Author
 
